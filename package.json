@@ -1,0 +1,23 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Bamazon storefront powered by MySQL and Node.js",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidWeid/Bamazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidWeid/Bamazon/issues"
+  },
+  "homepage": "https://github.com/DavidWeid/Bamazon#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "inquirer": "^6.2.2"
+  }
+}
