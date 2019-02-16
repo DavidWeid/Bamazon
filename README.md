@@ -18,4 +18,6 @@ After cloning the repository or downloading the files found in the repository, r
   - mysql
   - table
   
-Then use the [schema.sql](schema.sql) file to create the neccessary *bamazon* database.
+Then use the [Schema SQL](schema.sql) file to create the neccessary *bamazon* database. Once the npm packages are installed and the database created, you can use the Bamazon application.
+
+To use the **customer** application, run `node bamazonCustomer.js`.
