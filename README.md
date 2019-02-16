@@ -19,5 +19,15 @@ After cloning the repository or downloading the files found in the repository, r
   - table
   
 Then use the [Schema SQL](schema.sql) file to create the neccessary *bamazon* database. Once the npm packages are installed and the database created, you can use the Bamazon application.
-
+- - -
 To use the **customer** application, run `node bamazonCustomer.js`.
+
+Running the application will first display all items in the storefront. Even items that are not in stock are displayed. The items listed include the following information:
+  - Item ID
+  - Item Name
+  - Item Department
+  - Item Price
+  - Item Stock
+After displaying all items, the application prompts the user
+>Please enter the product ID of your desired item
+- - -
