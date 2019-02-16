@@ -104,7 +104,11 @@ var userShop = function() {
 
                     var itemCost = res[0].price;
 
-                    updateShop(newStockQuantity, shopItem.product_id);
+                    var salesAmt = parseInt(itemCost * shopItem.quantity);
+
+                    var productSalesTotal = salesAmt + parseInt(res[0].product_sales);
+
+                    updateShop(newStockQuantity, productSalesTotal, shopItem.product_id);
 
                     userPay(itemCost, shopItem.quantity);
 
@@ -142,12 +146,13 @@ var goAgain = function() {
 
 };
 
-var updateShop = function(quantity, id) {
+var updateShop = function(quantity, newSalesAmt, id) {
 
     connection.query("UPDATE products SET ? WHERE ?",
     [
         {
-            stock_quantity: quantity
+            stock_quantity: quantity,
+            product_sales: newSalesAmt
         },
         {
             item_id: id

@@ -1,6 +1,7 @@
 var inquirer = require("inquirer");
 var mysql = require("mysql");
 var { table } = require("table");
+var departments = [];
 
 // Configure connection to bamazon database
 var connection = mysql.createConnection({
@@ -17,9 +18,21 @@ connection.connect(function(err) {
 
     console.log("\nConnected as Manager ID " + connection.threadId + ".\n");
 
+    connection.query("SELECT * FROM departments", function(err, res) {
+        if (err) throw err;
+
+        res.forEach(function(one) {
+            if (departments.indexOf(one.department_name) === -1) {
+                departments.push(one.department_name);
+            }
+        });
+
+    })
+
     mainMenu();    
 })
 
+// List 5 actions to take
 var mainMenu = function() {
 
     inquirer.prompt({
@@ -65,6 +78,7 @@ var mainMenu = function() {
 
 };
 
+// Allow manager to see all items in the shop
 function viewItems() {
 
     connection.query("SELECT * FROM products", function(err, res) {
@@ -86,6 +100,7 @@ function viewItems() {
 
 }
 
+// Allow manager to see all low inventory (>10) items in the shop
 function lowStock() {
 
     connection.query("SELECT * FROM products WHERE stock_quantity<10", function(err, res) {
@@ -107,6 +122,7 @@ function lowStock() {
 
 }
 
+// Allow manager to add stock quantity to an existing item
 function addStock() {
 
     inquirer.prompt([
@@ -176,6 +192,7 @@ function addStock() {
 
 }
 
+// Allow manager to add a product to the shop
 function addProduct() {
 
     inquirer.prompt([
@@ -185,9 +202,10 @@ function addProduct() {
             message: "Please enter the product name:"
         },
         {
-            type: "input",
+            type: "list",
             name: "department",
-            message: "Please enter the product department:"
+            message: "Please enter the product department:",
+            choices: departments
         },
         {
             type: "input",
@@ -212,7 +230,7 @@ function addProduct() {
             }
         }
     ]).then(function(newProduct) {
-        connection.query("INSERT INTO products set ?",
+        connection.query("INSERT INTO products SET ?",
         {
             product_name: newProduct.name,
             department_name: newProduct.department,
