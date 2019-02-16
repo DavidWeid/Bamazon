@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
     if (err) throw err;
 
-    console.log("\nConnected as ID " + connection.threadId + ".\n");
+    console.log("\nConnected as customer ID " + connection.threadId + ".\n");
 
     displayShop();
 
