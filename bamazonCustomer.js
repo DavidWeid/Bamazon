@@ -30,9 +30,8 @@ var displayShop = function() {
         var data = [["ID", "Item Name", "Department", "Price", "Stock"]];
 
         res.forEach(function(one) {
-                data.push([one.item_id, one.product_name, one.department_name, "$" + one.price, one.stock_quantity])
-            }
-        );
+            data.push([one.item_id, one.product_name, one.department_name, "$" + one.price, one.stock_quantity])
+        });
 
         var output = table(data);
 
@@ -101,7 +100,7 @@ var userShop = function() {
 
                     console.log("\nAlright!\n");
 
-                    var newStockQuantity = res[0].stock_quantity - shopItem.quantity;
+                    var newStockQuantity = parseInt(res[0].stock_quantity) - parseInt(shopItem.quantity);
 
                     var itemCost = res[0].price;
 
