@@ -18,4 +18,4 @@ After cloning the repository or downloading the files found in the repository, r
   - mysql
   - table
   
-Then use the schema.sql file to create the neccessary *bamazon* database.
+Then use the [schema.sql](schema.sql) file to create the neccessary *bamazon* database.
