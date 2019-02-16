@@ -8,7 +8,14 @@ Customers will be able to shop from the storefront.
 Managers will be able to view low inventory, add inventory, and add products.
 Supervisors will be able to view sales by department and create new departments.
 
-- - -
 ## Using and Testing Bamazon
 
-Hello
+This application requires the use of npm packages and the creation of a MySQL database.
+
+After cloning the repository or downloading the files found in the repository, run `npm install` to install:
+  - chalk
+  - inquirer
+  - mysql
+  - table
+  
+Then use the schema.sql file to create the neccessary *bamazon* database.
