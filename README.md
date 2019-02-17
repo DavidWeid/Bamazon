@@ -92,3 +92,9 @@ For the first prompt, the user enters the product name. For the second prompt, t
 When adding to inventory, the user must enter a valid item ID and a quantity > 0. When adding a product, the user must enter a department that exists, must enter a price > 0, and enter a quantity > 0.
 - - -
 ### To use the **supervisor** application, run `node bamazonSupervisor.js`.
+
+## Contact Me
+
+For questions, comments, or more information please reach me at
+
+[david.weid.2@gmail.com]
