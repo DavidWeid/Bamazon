@@ -109,6 +109,14 @@ and then
 
 For the first prompt, the user enters the new department name. For the second prompt, the user enters the new department overhead costs. The application then informs the user that the department was added, and then displays the *mainMenu*.
 - - -
+## Demo Videos
+![Customer Bamazon Application](/demoVideos/bamazonCustomerDemo.webm)
+
+  - or ![Google Drive](https://drive.google.com/file/d/19nunpBrlzdwIF2RU-UlQdzyjE1nPT27I/view?usp=sharing)
+
+![Manager Bamazon Application](/demoVideos/bamazonManagerDemo.webm)
+  - or ![Google Drive](https://drive.google.com/file/d/1g5TWnGmZEnoRx6tJwDH538AZLb4M1Yw-/view?usp=sharing)
+
 ## Contact Me
 
 For questions, comments, or more information please reach me at
