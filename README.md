@@ -35,4 +35,16 @@ After displaying all items, the application prompts the user twice
 and then
 
 >Please enter the desired quantity
+
+For the first prompt, the user must enter a number. This number is made to match the Item ID found in the table. For example, entering **3** for the ID corresponds to the item with the name **USB Coffee Warmer**.
+
+For the second prompt, the user must enter a number, like before. This number is made to represent the number of items (quantity) with the previously entered ID that the user wants to purchase. For example, entering **2** for the quantity corresponds to **2x** the USB Coffee Warmer.
+
+After entering the item ID and the desired quantity, the application will take the order, if possible, and display the total cost of the purchase. The application then prompts the user with the option to continue shopping. If the user chooses "Yes", the application starts up again with an updated storefront and the same prompt for product ID as before.
+
+**Customer Restrictions**
+
+For the product ID, the user must enter a number > 0. Negative numbers and string values do not affect the prompt. If the user enters a number that does not correspond to an item, the application informs the user that the item does not exist and then prompts the user to continue shopping or exit.
+
+For the product quantity, the user must enter a number > 0. Negative numbers and string values do not affect the prompt. If the user enters a quantity greater than the total quantity of the item, then the application informs the user that the storefront does not have that much in stock and then prompts the user to continue shopping or exit.
 - - -
