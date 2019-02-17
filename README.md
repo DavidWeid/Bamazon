@@ -20,7 +20,7 @@ After cloning the repository or downloading the files found in the repository, r
   
 Then use the [Schema SQL](schema.sql) file to create the neccessary *bamazon* database. Once the npm packages are installed and the database created, you can use the Bamazon application.
 - - -
-To use the **customer** application, run `node bamazonCustomer.js`.
+### To use the **customer** application, run `node bamazonCustomer.js`.
 
 Running the application will first display all items in the storefront. Even items that are not in stock are displayed. The items listed include the following information:
   - Item ID
@@ -48,7 +48,7 @@ For the product ID, the user must enter a number > 0. Negative numbers and strin
 
 For the product quantity, the user must enter a number > 0. Negative numbers and string values do not affect the prompt. If the user enters a quantity greater than the total quantity of the item, then the application informs the user that the storefront does not have that much in stock and then prompts the user to continue shopping or exit.
 - - -
-To use the **manager** application, run `node bamazonManager.js`.
+### To use the **manager** application, run `node bamazonManager.js`.
 
 Running the application will display a *mainMenu* prompt. The options for the user are:
   - View Products for Sale
@@ -91,3 +91,4 @@ For the first prompt, the user enters the product name. For the second prompt, t
 
 When adding to inventory, the user must enter a valid item ID and a quantity > 0. When adding a product, the user must enter a department that exists, must enter a price > 0, and enter a quantity > 0.
 - - -
+### To use the **supervisor** application, run `node bamazonSupervisor.js`.
