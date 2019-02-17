@@ -97,4 +97,4 @@ When adding to inventory, the user must enter a valid item ID and a quantity > 0
 
 For questions, comments, or more information please reach me at
 
-[david.weid.2@gmail.com]
+david.weid.2@gmail.com
