@@ -31,5 +31,8 @@ Running the application will first display all items in the storefront. Even ite
   
 After displaying all items, the application prompts the user twice
 >Please enter the product ID of your desired item
+
+and then
+
 >Please enter the desired quantity
 - - -
