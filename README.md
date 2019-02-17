@@ -29,6 +29,7 @@ Running the application will first display all items in the storefront. Even ite
   - Item Price
   - Item Stock
   
-After displaying all items, the application prompts the user
+After displaying all items, the application prompts the user twice
 >Please enter the product ID of your desired item
+>Please enter the desired quantity
 - - -
