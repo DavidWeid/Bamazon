@@ -70,7 +70,7 @@ and then
 
 For the first prompt, the user enters the product ID. For the second prompt, the user enters the quantity to add to the current stock. After entering the required information, the *mainMenu* will be displayed and the uesr can view an **UPDATED** storefront if desired.
 
-Selecting **"Add New Product"** will prompt the user
+Selecting **"Add New Product"** will prompt the user four times
 >Please enter the product name
 
 and then
@@ -93,6 +93,22 @@ When adding to inventory, the user must enter a valid item ID and a quantity > 0
 - - -
 ### To use the **supervisor** application, run `node bamazonSupervisor.js`.
 
+Running the application will display a *mainMenu* prompt. The options for the user are:
+  - View Product Sales by Department
+  - Create New Department
+  - Exit
+  
+Selecting **"View Product Sales by Department"** will . . .
+
+Selecting **"Create New Department"** will prompt the user twice
+>Please enter the new department's name
+
+and then
+
+>Please enter the new department's overhead costs
+
+For the first prompt, the user enters the new department name. For the second prompt, the user enters the new department overhead costs. The application then informs the user that the department was added, and then displays the *mainMenu*.
+- - -
 ## Contact Me
 
 For questions, comments, or more information please reach me at
