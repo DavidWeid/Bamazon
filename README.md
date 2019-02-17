@@ -40,11 +40,54 @@ For the first prompt, the user must enter a number. This number is made to match
 
 For the second prompt, the user must enter a number, like before. This number is made to represent the number of items (quantity) with the previously entered ID that the user wants to purchase. For example, entering **2** for the quantity corresponds to **2x** the USB Coffee Warmer.
 
-After entering the item ID and the desired quantity, the application will take the order, if possible, and display the total cost of the purchase. The application then prompts the user with the option to continue shopping. If the user chooses "Yes", the application starts up again with an updated storefront and the same prompt for product ID as before.
+After entering the item ID and the desired quantity, the application will take the order, if possible, and display the total cost of the purchase. The application then prompts the user with the option to continue shopping. If the user chooses "Yes", the application starts up again with an **UPDATED** storefront and the same prompt for product ID as before.
 
 **Customer Restrictions**
 
 For the product ID, the user must enter a number > 0. Negative numbers and string values do not affect the prompt. If the user enters a number that does not correspond to an item, the application informs the user that the item does not exist and then prompts the user to continue shopping or exit.
 
 For the product quantity, the user must enter a number > 0. Negative numbers and string values do not affect the prompt. If the user enters a quantity greater than the total quantity of the item, then the application informs the user that the storefront does not have that much in stock and then prompts the user to continue shopping or exit.
+- - -
+To use the **manager** application, run `node bamazonManager.js`.
+
+Running the application will display a *mainMenu* prompt. The options for the user are:
+  - View Products for Sale
+  - View Low Inventory
+  - Add to Inventory
+  - Add New Product
+  - Exit
+  
+Selecting **"View Products for Sale"** will display all items in the storefront (same view as the customer) and then the *mainMenu*.
+
+Selecting **"View Low Inventory"** will display all items in the storefront with a stock quantity > 10 and then the *mainMenu*.
+
+Selecting **"Add to Inventory"** will prompt the user twice
+>Please enter the product ID
+
+and then
+
+>Please enter the quantity to add
+
+For the first prompt, the user enters the product ID. For the second prompt, the user enters the quantity to add to the current stock. After entering the required information, the *mainMenu* will be displayed and the uesr can view an **UPDATED** storefront if desired.
+
+Selecting **"Add New Product"** will prompt the user
+>Please enter the product name
+
+and then
+
+>Please enter the product department
+
+and then
+
+>Please enter the product price
+
+and then
+
+>Please enter the product stock quantity
+
+For the first prompt, the user enters the product name. For the second prompt, the user selects the product department from a list of existing departments. For the third prompt, the user enters the product price, and lastly the stock quantity of the product. The *mainMenu* is then displayed where the user can view an **UPDATED** storefront, do something else, or exit.
+
+**Manager Restrictions**
+
+When adding to inventory, the user must enter a valid item ID and a quantity > 0. When adding a product, the user must enter a department that exists, must enter a price > 0, and enter a quantity > 0.
 - - -
