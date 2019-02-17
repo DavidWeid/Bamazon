@@ -122,6 +122,11 @@ For the first prompt, the user enters the new department name. For the second pr
 - [GitHub](/demoVideos/bamazonManagerDemo.webm)
 - [Google Drive](https://drive.google.com/file/d/1g5TWnGmZEnoRx6tJwDH538AZLb4M1Yw-/view?usp=sharing)
 
+**Supervisor Application**
+
+- [GitHub](/demoVideos/bamazonSupervisorDemo.webm)
+- [Google Drive]()
+
 ## Contact Me
 
 For questions, comments, or more information please reach me at
