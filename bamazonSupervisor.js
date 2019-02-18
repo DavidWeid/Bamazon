@@ -56,6 +56,43 @@ function mainMenu() {
 
 function viewSales() {
 
+    // connection.query("SELECT SUM(product_sales), products.department_name FROM products LEFT JOIN departments ON products.department_name=departments.department_name GROUP BY products.department_name", function(err, res) {
+    //     if (err) throw err;
+    //     console.log(res);
+    // });
+
+    // connection.query("SELECT departments.department_id, products.department_name, departments.over_head_costs, products.product_sales FROM departments LEFT JOIN products ON departments.department_name=products.department_name SUM(product_sales) FROM products", function(err, res) {
+    //     if (err) throw err;
+
+    //     var data = [["Department ID", "Department", "OHC", "Product Sales"]];
+
+    //     res.forEach(function(one) {
+    //         data.push([one.department_id, one.department_name, one.over_head_costs, one.product_sales]);
+    //     });
+
+    //     var output = table(data);
+    //     console.log(output);
+    // });
+
+    // connection.query("SELECT departments.department_id, departments.department_name, departments.over_head_costs, products.product_sales FROM departments LEFT JOIN(SELECT SUM(products.product_sales), department_name FROM products GROUP BY department_name)x ON x.department_name=departments.department_name", function(err, res) {
+    //     if (err) throw err;
+
+    //     console.log(res);
+    // })
+
+    connection.query("SELECT * FROM departments ds LEFT JOIN (SELECT SUM(product_sales) AS prod_sales, department_name FROM products ps GROUP BY department_name) as ps ON ds.department_name=ps.department_name", function(err, res) {
+        if (err) throw err;
+
+        var data = [["Department ID", "Department", "OHC", "Product Sales"]];
+
+        res.forEach(function(one) {
+            data.push([one.department_id, one.department_name, one.over_head_costs, one.prod_sales]);
+        });
+    
+        var output = table(data);
+        console.log(output);
+    })
+
 }
 
 function createDepartment() {
