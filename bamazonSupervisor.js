@@ -80,21 +80,23 @@ function viewSales() {
     //     console.log(res);
     // })
 
-    connection.query("SELECT * FROM departments ds LEFT JOIN (SELECT SUM(product_sales) AS prod_sales, department_name FROM products ps GROUP BY department_name) AS ps ON ds.department_name=ps.department_name", function(err, res) {
+    connection.query("SELECT ds.*, prod_sales, prod_sales - over_head_costs AS profit FROM departments ds LEFT JOIN (SELECT SUM(product_sales) AS prod_sales, department_name  FROM products ps GROUP BY department_name) AS ps ON ds.department_name=ps.department_name", function(err, res) {
         if (err) throw err;
 
         console.log(res);
 
         console.log(res[0]);
 
-        var data = [["Department ID", "Department", "OHC", "Product Sales"]];
+        var data = [["Department ID", "Department", "OHC", "Product Sales", "Profitability"]];
 
         res.forEach(function(one) {
-            data.push([one.department_id, one.department_name, one.over_head_costs, one.prod_sales]);
+            data.push([one.department_id, one.department_name, one.over_head_costs, one.prod_sales, one.profit]);
         });
     
         var output = table(data);
         console.log(output);
+
+        mainMenu();
     })
 
 }
