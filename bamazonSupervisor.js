@@ -80,8 +80,12 @@ function viewSales() {
     //     console.log(res);
     // })
 
-    connection.query("SELECT * FROM departments ds LEFT JOIN (SELECT SUM(product_sales) AS prod_sales, department_name FROM products ps GROUP BY department_name) as ps ON ds.department_name=ps.department_name", function(err, res) {
+    connection.query("SELECT * FROM departments ds LEFT JOIN (SELECT SUM(product_sales) AS prod_sales, department_name FROM products ps GROUP BY department_name) AS ps ON ds.department_name=ps.department_name", function(err, res) {
         if (err) throw err;
+
+        console.log(res);
+
+        console.log(res[0]);
 
         var data = [["Department ID", "Department", "OHC", "Product Sales"]];
 
