@@ -98,7 +98,7 @@ Running the application will display a *mainMenu* prompt. The options for the us
   - Create New Department
   - Exit
   
-Selecting **"View Product Sales by Department"** will . . .
+Selecting **"View Product Sales by Department"** will display all departments that exist in the storefront. Along with each department is the department ID, the department over-head costs, the total product sales for the department, and the net profitability of the department. Every time a customer uses the bamazonCustomer application, the product sales for the product and its corresponding department are updated. This information is only viewable through the supervisor application. The same goes with department profitability.
 
 Selecting **"Create New Department"** will prompt the user twice
 >Please enter the new department's name
@@ -125,7 +125,7 @@ For the first prompt, the user enters the new department name. For the second pr
 **Supervisor Application**
 
 - [GitHub](/demoVideos/bamazonSupervisorDemo.webm)
-- [Google Drive]()
+- [Google Drive](https://drive.google.com/file/d/1FmAUkNr76nrCmWnBnmZuKjXs5ycNLE3L/view?usp=sharing)
 
 ## Contact Me
 
